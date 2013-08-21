@@ -1,6 +1,5 @@
 Useredit::Application.routes.draw do
-  resources :microposts
-
   root to:"welcome#index"
-  resources :users
+  get 'users/todo/:id' => 'users#todo', :as => :todo
+  resources :users  
 end

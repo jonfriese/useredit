@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo List</title>
+        <script type="text/javascript">
+            window.onload=function() {
+            var button = document.getElementById("submitButton");
+            button.onclick = addItem;}
+
+            function addItem() {
+                var textInput = document.getElementById("item");
+                var text = textInput.value;
+                var ol = document.getElementById("ol");
+                var li = document.createElement("li");
+                li.innerHTML = text;
+                li.onclick = function() {this.parentNode.removeChild(this);}
+                if (ol.childElementCount == 0) {
+                    ol.appendChild(li);
+                }
+                else {
+                    ol.insertBefore(li, ol.firstChild);}}
+
+        </script>
+    
+    </head>
+    <body>
+        <form>
+            <input id="item" type="text" size="20"><br>
+            <input id="submitButton" type="button" value="Add ToDo">
+        </form>
+        <ol id="ol"></ol>
+    </body>
+</html>

@@ -120,7 +120,7 @@ DEPENDENCIES
   jquery-rails (= 3.0.4)
   pg
   rails (= 4.0.0)
-  rails_12factor (= 0.0.2)
+  rails_12factor
   sass-rails (= 4.0.0)
   sdoc (= 0.3.20)
   sqlite3
